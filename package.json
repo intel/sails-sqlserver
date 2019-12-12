@@ -1,6 +1,6 @@
 {
   "name": "sails-mssql",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "SQL Server Adapter for Sails / Waterline",
   "main": "lib/adapter.js",
   "scripts": {
@@ -38,7 +38,7 @@
     "bluebird": "^3.5.1",
     "chai": "^4.1.2",
     "lodash": "^4.17.5",
-    "machinepack-mssql": "^1.0.0-rc.1.1",
+    "machinepack-mssql": "^1.1.0",
     "moment": "^2.20.1",
     "mssql": "^4.1.0",
     "underscore.string": "^3.0.0"
