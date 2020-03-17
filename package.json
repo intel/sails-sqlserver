@@ -1,6 +1,6 @@
 {
   "name": "sails-mssql",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SQL Server Adapter for Sails / Waterline",
   "main": "lib/adapter.js",
   "scripts": {
@@ -39,7 +39,7 @@
     "chai": "^4.1.2",
     "lodash": "^4.17.5",
     "moment": "^2.20.1",
-    "mssql": "^4.1.0",
+    "mssql": "^6.2.0",
     "underscore.string": "^3.0.0"
   },
   "devDependencies": {
