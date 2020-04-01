@@ -38,7 +38,7 @@
     "bluebird": "^3.5.1",
     "chai": "^4.1.2",
     "lodash": "^4.17.5",
-    "machinepack-mssql": "^1.2.0",
+    "machinepack-mssql": "^1.2.2",
     "moment": "^2.20.1",
     "mssql": "^6.2.0",
     "underscore.string": "^3.0.0"
