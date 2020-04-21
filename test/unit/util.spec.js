@@ -114,7 +114,7 @@ describe('util stuffs', function () {
   });
   it('should handle null', function () {
     expect(util.parseWherePhrase({ tableAs: 'team', where: { name: null } })).to.equal(`[team].[name] is null`);
-    expect(util.parseWherePhrase({ tableAs: 'team', where: { count: { '!': null } } }))
+    expect(util.parseWherePhrase({ tableAs: 'team', where: { count: { '!=': null } } }))
       .to.equal(`[team].[count] is not null`)
     expect(util.parseWherePhrase({ tableAs: 'team', where: { count: { 'not': null } } }))
       .to.equal(`[team].[count] is not null`)
@@ -172,10 +172,10 @@ describe('util stuffs', function () {
       .to.equal(`[team].[name] >= 'bob'`)
   })
 
-  it('should convert !', function () {
-    expect(util.parseWherePhrase({ tableAs: 'team', where: { name: { '!': 'bob' } } }))
+  it('should convert !=', function () {
+    expect(util.parseWherePhrase({ tableAs: 'team', where: { name: { '!=': 'bob' } } }))
       .to.equal(`[team].[name] <> 'bob'`)
-    expect(util.parseWherePhrase({ tableAs: 'team', where: { count: { '!': 3 } } }))
+    expect(util.parseWherePhrase({ tableAs: 'team', where: { count: { '!=': 3 } } }))
       .to.equal(`[team].[count] <> 3`)
     expect(util.parseWherePhrase({ tableAs: 'team', where: { name: { 'not': 'bob' } } }))
       .to.equal(`[team].[name] <> 'bob'`)
@@ -207,13 +207,13 @@ describe('util stuffs', function () {
       .to.equal(`[team].[name] IN ('bob', 'sue')`);
   })
 
-  it('should convert ! arrays', function () {
-    expect(util.parseWherePhrase({ tableAs: 'team', where: { name: { '!': ['bob', 'sue'] } } }))
+  it('should convert != arrays', function () {
+    expect(util.parseWherePhrase({ tableAs: 'team', where: { name: { '!=': ['bob', 'sue'] } } }))
       .to.equal(`[team].[name] NOT IN ('bob', 'sue')`);
   })
 
   it('should convert or arrays', function () {
-    expect(util.parseWherePhrase({ tableAs: 'team', where: { or: [{ name: { '!': ['bob', 'sue'] } }, { name: 'ann' }] } }))
+    expect(util.parseWherePhrase({ tableAs: 'team', where: { or: [{ name: { '!=': ['bob', 'sue'] } }, { name: 'ann' }] } }))
       .to.equal(`(([team].[name] NOT IN ('bob', 'sue')) OR ([team].[name] = 'ann'))`);
   })
 });
