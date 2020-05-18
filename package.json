@@ -37,9 +37,11 @@
   "dependencies": {
     "bluebird": "^3.5.1",
     "chai": "^4.1.2",
+    "deep-extend": "^0.6.0",
     "knex": "^0.21.1",
     "lodash": "^4.17.15",
     "machinepack-mssql": "^1.2.2",
+    "minimist": "^1.2.5",
     "moment": "^2.20.1",
     "mssql": "^6.2.0",
     "underscore.string": "^3.0.0"
