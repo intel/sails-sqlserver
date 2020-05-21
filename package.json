@@ -1,6 +1,6 @@
 {
   "name": "sails-mssql",
-  "version": "2.1.3", 
+  "version": "2.1.3",
   "description": "SQL Server Adapter for Sails / Waterline",
   "main": "lib/adapter.js",
   "scripts": {
@@ -36,8 +36,6 @@
   "license": "MIT",
   "dependencies": {
     "bluebird": "^3.5.1",
-    "chai": "^4.1.2",
-    "deep-extend": "^0.6.0",
     "lodash": "^4.17.15",
     "machinepack-mssql": "^1.2.3",
     "moment": "^2.20.1",
@@ -46,6 +44,7 @@
   },
   "devDependencies": {
     "captains-log": "^2.0.3",
+    "chai": "^4.2.0",
     "mocha": "^7.1.2",
     "proxyquire": "^2.1.0",
     "waterline-adapter-tests": "git+https://github.com/davepreston/waterline-adapter-tests.git#patch-1"
